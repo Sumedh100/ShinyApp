@@ -1,0 +1,34 @@
+---
+title: "Ozone Level Predictor "
+author: "Sumedh"
+date: "4/18/2020"
+output: ioslides_presentation
+---
+
+## This application using Linear regression to predict the ozone levels based on different parameters
+
+
+## Data used
+
+the data used for this app is the airQuality data from the datasets package in R.
+the model will predict ozone levels based on Temperature, Solar Radiation, and other factors.
+
+```{r, echo=TRUE, eval=TRUE}
+library(datasets)
+```
+
+## Description
+The data is as shown: 
+```{r, eval=TRUE, echo=TRUE}
+head(airquality)
+```
+
+## The application uses simple Linear regression to identify the trend between target and predictor variables and thus establish a linear relation used to predict new values.
+
+\pagebreak
+```{r, echo=TRUE, eval=TRUE}
+model <- lm(Ozone ~ Temp, data = airquality)
+plot(model)
+```
+
+## Thank You
